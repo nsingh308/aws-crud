@@ -4,9 +4,7 @@ module.exports = {
       region: 'local',
       endpoint: 'http://localhost:8000'
     },
-    aws_remote_config: {//testDev
-        //accessKeyId:"",
-        //secretAccessKey:"",
+    aws_remote_config: {
         region: "us-east-1"
     }
   };
