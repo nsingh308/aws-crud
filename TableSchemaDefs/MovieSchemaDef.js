@@ -1,6 +1,6 @@
 
-var params = {
-    TableName : "Movies",
+const moviesSchema = {
+    TableName : "Movies1",
     KeySchema: [       
         { AttributeName: "year", KeyType: "HASH"},  //Partition key
         { AttributeName: "title", KeyType: "RANGE" }  //Sort key
@@ -16,5 +16,5 @@ var params = {
 };
 
 module.exports={
-    params
+    moviesSchema
 }

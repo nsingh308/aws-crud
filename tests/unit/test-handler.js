@@ -9,8 +9,8 @@ describe('Tests DynamoDb Create Handler', function () {
     it('verifies successful response', async () => {
         const result = await app.handler(event, context);
         console.log(result);
-           // expect(result).to.be.an('{}');
-            //expect(result.statusCode).to.equal(202);
+         expect(result).to.be.an('object');
+       // expect(result.statusCode).to.equal(202);
         
 
         

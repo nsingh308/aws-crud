@@ -1,7 +1,6 @@
 // const axios = require('axios')
 // const url = 'http://checkip.amazonaws.com/';
-let response;
-const createTableDao = require('./dao/CreateTable')
+const movieDao = require('./dao/MovieDao')
 /**
  *
  * Event doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html#api-gateway-simple-proxy-for-lambda-input-format
@@ -15,12 +14,14 @@ const createTableDao = require('./dao/CreateTable')
  * 
  */
 exports.handler =  async(event, context) => {
-    try {    
-        ;
-        const result = await createTableDao.createTableFunction();
-
-
-        return result;
+    try {    //pass the event to call individual functions
+        //const tableCreationStatus = await movieDao.createTableFunction();
+        //console.log(tableCreationStatus);
+        //const year = 2015; // these should be passed via event
+        //const title = "The Big New Movie";
+        //const insert = await movieDao.insertIntoMovieFunction(year, title)
+        //const del = await movieDao.deleteItemConditionFunction(year,title);
+        return del;
     }catch(error){
         console.log(error)
         return error;
